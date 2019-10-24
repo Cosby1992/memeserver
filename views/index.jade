@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  ul
+    for file in memepaths
+      if(file != '')
+        li
+        a(href = "/meme/" + file) #{file} 
+      else
+        li sorry, no memes!
+      
